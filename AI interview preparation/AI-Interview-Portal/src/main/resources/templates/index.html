@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d'); /* AI-themed background */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        h1 {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 30px 60px;
+            border-radius: 15px;
+            font-size: 3em;
+            margin-bottom: 40px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            background-color: #28a745;
+            padding: 15px 30px;
+            margin: 10px;
+            border-radius: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h1>WELCOME TO AI_INTERVIEW PORTAL</h1>
+    <a href="/login">Login</a>
+    <a href="/register">Register</a>
+</body>
+</html>

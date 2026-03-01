@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Execution Result</title>
+    <style>
+        body {
+            background: #121212;
+            color: #ffffff;
+            font-family: Consolas, monospace;
+            padding: 40px;
+        }
+        .container {
+            background: #1e1e1e;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 900px;
+            margin: auto;
+        }
+        h2 {
+            color: #00ffff;
+        }
+        h3 {
+            margin-top: 30px;
+            color: #00ccff;
+        }
+        pre {
+            background: #2d2d2d;
+            padding: 20px;
+            border-radius: 6px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+        }
+        a {
+            display: inline-block;
+            margin-top: 30px;
+            background: #00ffff;
+            color: black;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+        a:hover {
+            background: #00cccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 th:text="'Result for: ' + ${question}"></h2>
+
+        <h3>Submitted Code:</h3>
+        <pre th:text="${code}"></pre>
+
+        <h3 th:if="${input != null && !#strings.isEmpty(input)}">Input:</h3>
+        <pre th:if="${input != null && !#strings.isEmpty(input)}" th:text="${input}"></pre>
+
+        <h3 th:if="${output.startsWith('Execution Error:')}">Error:</h3>
+        <pre th:if="${output.startsWith('Execution Error:')}" th:text="${output}"></pre>
+
+        <h3 th:if="${!output.startsWith('Execution Error:')}">Output:</h3>
+        <pre th:if="${!output.startsWith('Execution Error:')}" th:text="${output}"></pre>
+
+        <a href="/dashboard">⬅ Back to Dashboard</a>
+    </div>
+</body>
+</html>

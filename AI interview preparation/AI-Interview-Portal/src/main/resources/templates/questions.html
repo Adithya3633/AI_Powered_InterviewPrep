@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Interview Questions</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('/questions-bg.jpg'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #fff;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.8);
+            width: 80%;
+            margin: 50px auto;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+
+        h2 {
+            text-align: center;
+            color: #00ffff;
+            margin-bottom: 30px;
+        }
+
+        .question a {
+            display: block;
+            background-color: #333;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            font-size: 18px;
+            color: #fff;
+            text-decoration: none;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .question a:hover {
+            transform: scale(1.02);
+            background-color: #444;
+        }
+
+        a.back-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #00ffff;
+            color: #000;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        a.back-btn:hover {
+            background-color: #00cccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 th:text="'Questions for ' + ${category.toUpperCase()}"></h2>
+        
+        <div th:each="q : ${questions}" class="question">
+            <a th:href="@{/code-editor(category=${category}, question=${q.question})}"
+               th:text="${q.question}"></a>
+        </div>
+
+        <a href="/dashboard" class="back-btn">⬅ Back to Dashboard</a>
+    </div>
+</body>
+</html>

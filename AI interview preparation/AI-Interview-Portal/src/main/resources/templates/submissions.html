@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>All Submissions</title>
+    <style>
+        body {
+            background: #1e1e1e;
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 30px;
+        }
+        h2 {
+            color: #00ffff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #2d2d2d;
+        }
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #444;
+            text-align: left;
+        }
+        th {
+            background-color: #00ffff;
+            color: black;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            background: #00ffff;
+            color: black;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a:hover {
+            background: #00cccc;
+        }
+    </style>
+</head>
+<body>
+    <h2>All Code Submissions</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>User</th>
+                <th>Question</th>
+                <th>Code</th>
+                <th>Output</th>
+                <th>Timestamp</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="submission : ${submissions}">
+                <td th:text="${submission.id}"></td>
+                <td th:text="${submission.username}"></td>
+                <td th:text="${submission.question}"></td>
+                <td><pre th:text="${submission.code}"></pre></td>
+                <td><pre th:text="${submission.output}"></pre></td>
+                <td th:text="${submission.timestamp}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="/dashboard">⬅ Back to Dashboard</a>
+</body>
+</html>
