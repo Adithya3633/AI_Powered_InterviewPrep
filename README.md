@@ -38,7 +38,7 @@ This project is ideal for interview preparation, academic use, or as a portfolio
 AI_Powered_InterviewPrep/
 │
 ├── AI interview preparation/
-│   └── AI-Interview-Portal/   ← Main Spring Boot application (current folder)
+│   └── AI-Interview-Portal/   ← Main Spring Boot application 
 │
 ├── OutputScreenshots/      ← Screenshots and demo images
 ├── Architecture-ai interview portal/
@@ -189,5 +189,4 @@ This project is created for educational and portfolio purposes. No license is at
 
 ---
 
-*Screenshot folder paths and file names should be adjusted depending on where you place the images (either `AI interview-outputs` or `screenshots`).*
 
