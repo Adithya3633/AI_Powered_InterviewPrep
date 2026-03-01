@@ -40,7 +40,7 @@ AI_Powered_InterviewPrep/
 ├── AI interview preparation/
 │   └── AI-Interview-Portal/   ← Main Spring Boot application (current folder)
 │
-├── AI interview-outputs/      ← Screenshots and demo images
+├── OutputScreenshots/      ← Screenshots and demo images
 ├── Architecture-ai interview portal/
 ├── DOCS/
 └── README.md
