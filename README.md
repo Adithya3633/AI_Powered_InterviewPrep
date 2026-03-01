@@ -50,7 +50,6 @@ AI_Powered_InterviewPrep/
 ---
 
 ## 🖼️ Application Screenshots
-## 🖼️ Application Screenshots
 
 <div align="center">
 
