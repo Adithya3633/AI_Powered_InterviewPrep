@@ -1,4 +1,4 @@
-## 🚀 AI Powered Interview Preparation Portal**
+##           🚀  AI Powered Interview Preparation Portal
 
 A full‑stack Spring Boot 3 web application that simulates a real coding interview environment.
 
